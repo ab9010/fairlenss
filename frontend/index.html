@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FairLens — Detect Bias. Measure Fairness. Build Responsible AI.</title>
+<meta name="description" content="FairLens is an educational fairness-testing platform for exploring how AI models can treat demographic groups differently, and what to do about it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="bias-test.html">Fairness Lab</a></li>
+      <li><a href="bias-test.html#simulator">Simulator</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="mobile-cta"><a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">AI Ethics &amp; Bias Detection</span>
+      <h1>AI should be fair.<br>Right now, most of it<br>is never checked.</h1>
+      <p class="hero-lede">
+        FairLens is a hands-on lab for testing whether an AI model or dataset
+        treats different groups of people differently. Load a dataset, pick a
+        protected attribute, and see the disparity for yourself — measured,
+        not assumed.
+      </p>
+      <div class="hero-actions">
+        <a href="bias-test.html" class="btn btn-primary">Start Fairness Test</a>
+        <a href="learn.html" class="btn btn-ghost">Learn about AI bias</a>
+      </div>
+    </div>
+
+    <div class="hero-figure" role="img" aria-label="Example bar chart showing a loan approval rate of 82 percent for one group and 61 percent for another">
+      <div class="hero-card">
+        <div class="hero-card-top">
+          <span>Loan approval rate</span>
+          <span class="hero-card-tag">demo dataset</span>
+        </div>
+        <div class="hero-bars">
+          <div class="hero-bar-row">
+            <span class="hero-bar-label">Male</span>
+            <div class="hero-bar-track"><div class="hero-bar-fill" style="--w: 78%"></div></div>
+            <span class="hero-bar-value">78%</span>
+          </div>
+          <div class="hero-bar-row">
+            <span class="hero-bar-label">Female</span>
+            <div class="hero-bar-track"><div class="hero-bar-fill fill-alt" style="--w: 59%"></div></div>
+            <span class="hero-bar-value">59%</span>
+          </div>
+        </div>
+        <div class="hero-card-foot">
+          <strong>19 pt gap</strong> in outcomes for otherwise similar applicants
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="disclaimer-strip">
+  <div class="container">
+    <span>&#9432;</span>
+    <span><strong>Educational prototype.</strong> FairLens demonstrates fairness-testing concepts using a synthetic demo dataset and simplified, transparent metrics — it is not a certified auditing tool. See the <a href="about.html">About page</a> for details.</span>
+  </div>
+</div>
+
+<section class="section" id="what-is-bias">
+  <div class="container split-section">
+    <div class="split-heading">
+      <span class="eyebrow">The problem</span>
+      <h2>What is AI bias, really?</h2>
+    </div>
+    <div class="split-body">
+      <p>
+        AI bias happens when a model produces systematically different outcomes
+        for different groups of people — not because of anything relevant to
+        the decision, but because of patterns baked into the data it learned
+        from. It rarely looks like an obvious mistake. It looks like a loan
+        approval rate that's quietly ten points lower for one group, or a
+        resume screener that ranks identical qualifications differently.
+      </p>
+      <p>
+        The unsettling part is that a biased model can still be highly
+        accurate overall. Aggregate accuracy hides group-level unfairness —
+        which is exactly why fairness needs to be measured on its own terms.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="why-matters">
+  <div class="container">
+    <span class="eyebrow eyebrow-on-dark">Why it matters</span>
+    <h2 class="why-heading">AI systems increasingly decide who gets<br>a loan, a job, or a diagnosis.</h2>
+    <p class="why-lede">
+      The goal isn't just to build better AI. It's to build AI that treats
+      people fairly — and can be responsibly evaluated when it doesn't.
+    </p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <h3>Banking</h3>
+        <p>Loan and credit approval models decide access to housing, education and opportunity.</p>
+      </div>
+      <div class="impact-card">
+        <h3>Employment</h3>
+        <p>Resume-screening tools filter who even reaches a human interviewer.</p>
+      </div>
+      <div class="impact-card">
+        <h3>Healthcare</h3>
+        <p>Risk-prediction models influence who gets prioritized for care.</p>
+      </div>
+      <div class="impact-card">
+        <h3>Criminal justice</h3>
+        <p>Risk-assessment scores can shape bail, sentencing, and parole recommendations.</p>
+      </div>
+      <div class="impact-card">
+        <h3>Housing</h3>
+        <p>Automated screening affects who gets shown or approved for a rental.</p>
+      </div>
+      <div class="impact-card">
+        <h3>Education</h3>
+        <p>Predictive tools are used to flag, track, or evaluate students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <span class="eyebrow">The process</span>
+    <h2>How FairLens works</h2>
+
+    <ol class="process-list">
+      <li class="process-step">
+        <span class="process-index">01</span>
+        <div>
+          <h3>Upload</h3>
+          <p>Upload your own CSV, or use the built-in synthetic demo dataset.</p>
+        </div>
+      </li>
+      <li class="process-step">
+        <span class="process-index">02</span>
+        <div>
+          <h3>Select</h3>
+          <p>Choose a protected attribute (like gender) and an outcome column (like approval).</p>
+        </div>
+      </li>
+      <li class="process-step">
+        <span class="process-index">03</span>
+        <div>
+          <h3>Analyze</h3>
+          <p>FairLens calculates real fairness metrics from your data — nothing is hard-coded.</p>
+        </div>
+      </li>
+      <li class="process-step">
+        <span class="process-index">04</span>
+        <div>
+          <h3>Understand</h3>
+          <p>See a fairness score, charts, and a plain-language explanation of what was found.</p>
+        </div>
+      </li>
+      <li class="process-step">
+        <span class="process-index">05</span>
+        <div>
+          <h3>Improve</h3>
+          <p>Get tailored recommendations and preview a simplified mitigation strategy.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section metrics-section" id="metrics">
+  <div class="container">
+    <div class="split-section">
+      <div class="split-heading">
+        <span class="eyebrow">What gets measured</span>
+        <h2>Fairness metrics that speak plainly first, technically second</h2>
+      </div>
+      <div class="split-body">
+        <p>
+          Every metric on the results dashboard is explained in everyday
+          language before you see the number. "Compare the approval rate
+          between groups" comes before "demographic parity difference."
+        </p>
+      </div>
+    </div>
+
+    <div class="metric-preview-grid">
+      <div class="metric-preview-card">
+        <h4>Demographic Parity</h4>
+        <p>Do different groups get the positive outcome at similar rates?</p>
+      </div>
+      <div class="metric-preview-card">
+        <h4>Disparate Impact</h4>
+        <p>The ratio of the least-favoured group's rate to the most-favoured.</p>
+      </div>
+      <div class="metric-preview-card">
+        <h4>Equal Opportunity</h4>
+        <p>Among people who deserved the outcome, were they identified equally?</p>
+      </div>
+      <div class="metric-preview-card">
+        <h4>Fairness Score</h4>
+        <p>One composite number from 0–100 summarizing the disparity found.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section simulator-preview" id="simulator-preview">
+  <div class="container split-section">
+    <div class="split-heading">
+      <span class="eyebrow">Try it now</span>
+      <h2>Play with the Bias Simulator</h2>
+    </div>
+    <div class="split-body">
+      <p>
+        Drag two sliders to set a selection rate for two hypothetical groups
+        and instantly see the resulting disparity, disparate impact ratio,
+        and fairness status — no dataset required.
+      </p>
+      <a href="bias-test.html#simulator" class="btn btn-ghost">Open the simulator</a>
+    </div>
+  </div>
+</section>
+
+<section class="section learn-preview">
+  <div class="container split-section">
+    <div class="split-heading">
+      <span class="eyebrow">Go deeper</span>
+      <h2>Understand the five common types of AI bias</h2>
+    </div>
+    <div class="split-body">
+      <p>
+        Dataset bias, historical bias, representation bias, measurement bias,
+        and algorithmic bias each show up differently — and call for
+        different fixes. The Learn page walks through all five.
+      </p>
+      <a href="learn.html" class="btn btn-ghost">Learn AI ethics</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <h2>Ready to test your dataset?</h2>
+    <p>It takes about two minutes with the built-in demo dataset — no setup required.</p>
+    <a href="bias-test.html" class="btn btn-on-dark">Open Fairness Lab</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+        <p>AI Ethics &amp; Bias Detection — an educational prototype for exploring fairness in AI systems.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bias-test.html">Fairness Lab</a></li>
+          <li><a href="bias-test.html#simulator">Simulator</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="learn.html">AI Ethics</a></li>
+          <li><a href="learn.html#types-of-bias">Bias Detection</a></li>
+          <li><a href="about.html">Responsible AI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FairLens</span>
+      <span>Educational Prototype — Not a certified fairness audit</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

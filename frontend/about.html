@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — FairLens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/learn.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bias-test.html">Fairness Lab</a></li>
+      <li><a href="bias-test.html#simulator">Simulator</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li class="mobile-cta"><a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="about-hero container">
+  <span class="eyebrow">About FairLens</span>
+  <h1>A student project about making AI fairness legible.</h1>
+  <p>
+    FairLens was developed as part of a social internship project focused on
+    <strong>AI Ethics — Bias Detection</strong>. The goal is to make AI
+    fairness concepts easier to understand through an interactive,
+    accessible tool rather than a slide deck.
+  </p>
+</header>
+
+<section class="section section-tight">
+  <div class="container split-section">
+    <div class="split-heading"><h2>Project objectives</h2></div>
+    <div class="split-body">
+      <ul class="objectives-list">
+        <li>Create awareness about AI bias among students and the public</li>
+        <li>Demonstrate what fairness testing actually looks like in practice</li>
+        <li>Explain fairness metrics in plain, non-technical language</li>
+        <li>Help students understand what "responsible AI" means concretely</li>
+        <li>Encourage ethical habits early in an AI/ML learning journey</li>
+        <li>Show that fairness can be measured, not just discussed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <span class="eyebrow eyebrow-on-dark">Why this matters</span>
+    <h2 class="why-heading">Build AI that treats people fairly — and can be evaluated when it doesn't.</h2>
+    <p class="why-lede">
+      AI systems increasingly influence decisions that shape people's lives:
+      who gets a loan, who gets an interview, who gets flagged as high-risk.
+      The goal here isn't simply "build better AI." It's to build AI that
+      treats people fairly, and to give the people building it real tools
+      for checking that claim rather than assuming it.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Disclaimer</h2>
+    <div class="disclaimer-block">
+      <p>
+        FairLens is an educational prototype designed to demonstrate concepts
+        in AI fairness and bias detection. Its metrics and scoring should not
+        be interpreted as legal, regulatory, medical, financial, or
+        production-model certification.
+      </p>
+      <p>
+        The included demonstration dataset (a synthetic loan-approval dataset)
+        is entirely synthetic and was created solely for educational purposes.
+        It does not represent real people, real applicants, or real financial
+        decisions.
+      </p>
+      <p>
+        The Fairness Score used throughout this prototype is a transparent,
+        adjustable educational composite indicator — not a universal
+        regulatory or scientific threshold.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <h2>See it in action</h2>
+    <p>Run the demo dataset through the Fairness Lab in under two minutes.</p>
+    <a href="bias-test.html" class="btn btn-on-dark">Open Fairness Lab</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+        <p>AI Ethics &amp; Bias Detection — an educational prototype for exploring fairness in AI systems.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bias-test.html">Fairness Lab</a></li>
+          <li><a href="bias-test.html#simulator">Simulator</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="learn.html">AI Ethics</a></li>
+          <li><a href="learn.html#types-of-bias">Bias Detection</a></li>
+          <li><a href="about.html">Responsible AI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FairLens</span>
+      <span>Educational Prototype — Not a certified fairness audit</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

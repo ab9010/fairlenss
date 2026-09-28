@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding AI Ethics — FairLens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/learn.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bias-test.html">Fairness Lab</a></li>
+      <li><a href="bias-test.html#simulator">Simulator</a></li>
+      <li><a href="learn.html" class="active">Learn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="mobile-cta"><a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="learn-hero">
+  <div class="container">
+    <span class="eyebrow">Understanding AI Ethics</span>
+    <h1>Before you can fix bias, you need language for it.</h1>
+    <p>A working vocabulary for how AI systems can treat people unequally — and where that shows up in the real world.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container split-section">
+    <div class="split-heading"><h2>What is AI ethics?</h2></div>
+    <div class="split-body">
+      <p>
+        AI ethics is the practice of designing, deploying, and evaluating AI
+        systems in ways that respect people's rights and wellbeing. It asks
+        practical questions: Who could this system hurt if it's wrong? Who
+        gets to know how a decision was made? Who is accountable when it
+        fails?
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container split-section">
+    <div class="split-heading"><h2>What is AI bias?</h2></div>
+    <div class="split-body">
+      <p>
+        AI bias is a systematic difference in how a model treats different
+        groups of people, unrelated to anything that should legitimately
+        affect the decision. It typically comes from the data a model
+        learned from, the way the problem was framed, or both.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container split-section">
+    <div class="split-heading"><h2>Why does it matter?</h2></div>
+    <div class="split-body">
+      <p>
+        Models that were once research demos now sit inside real decisions —
+        who gets a loan, who gets interviewed, who gets flagged as high-risk.
+        A biased model doesn't just make a technical error; it can compound
+        an existing disadvantage every time it runs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tinted" id="real-world-impact">
+  <div class="container">
+    <span class="eyebrow">Where it shows up</span>
+    <h2>Real-world impact</h2>
+    <div class="impact-grid-light">
+      <div class="impact-card-light">
+        <h3>Banking</h3>
+        <p>Loan approval models decide who gets access to credit, housing, and financial opportunity.</p>
+      </div>
+      <div class="impact-card-light">
+        <h3>Employment</h3>
+        <p>Resume-screening tools decide who a human recruiter even sees.</p>
+      </div>
+      <div class="impact-card-light">
+        <h3>Healthcare</h3>
+        <p>Risk-prediction models can influence who is prioritized for care or treatment.</p>
+      </div>
+      <div class="impact-card-light">
+        <h3>Criminal justice</h3>
+        <p>Risk-assessment tools can shape recommendations around bail, sentencing, and parole.</p>
+      </div>
+      <div class="impact-card-light">
+        <h3>Housing</h3>
+        <p>Automated screening can affect who is shown or approved for a rental application.</p>
+      </div>
+      <div class="impact-card-light">
+        <h3>Education</h3>
+        <p>Predictive tools are increasingly used to flag, track, or evaluate students.</p>
+      </div>
+    </div>
+    <p class="impact-note">These categories describe known areas of concern in AI ethics research generally — FairLens does not attribute any specific incident to a named company or product.</p>
+  </div>
+</section>
+
+<section class="section" id="types-of-bias">
+  <div class="container">
+    <span class="eyebrow">Five common patterns</span>
+    <h2>Types of AI bias</h2>
+
+    <div class="bias-type-grid">
+      <div class="bias-type-card">
+        <span class="bias-type-index">1</span>
+        <h3>Dataset bias</h3>
+        <p>The training data itself doesn't accurately reflect the population the model will be used on — skewed samples in, skewed decisions out.</p>
+      </div>
+      <div class="bias-type-card">
+        <span class="bias-type-index">2</span>
+        <h3>Historical bias</h3>
+        <p>Even a perfectly accurate model can reproduce yesterday's inequalities if the historical outcomes it learned from were themselves unequal.</p>
+      </div>
+      <div class="bias-type-card">
+        <span class="bias-type-index">3</span>
+        <h3>Representation bias</h3>
+        <p>Some groups appear so rarely in the data that the model never learns their patterns well, leading to worse predictions for them.</p>
+      </div>
+      <div class="bias-type-card">
+        <span class="bias-type-index">4</span>
+        <h3>Measurement bias</h3>
+        <p>A chosen variable doesn't measure the same thing equally well across groups — e.g. using arrests as a stand-in for "crime committed."</p>
+      </div>
+      <div class="bias-type-card">
+        <span class="bias-type-index">5</span>
+        <h3>Algorithmic bias</h3>
+        <p>Even with balanced data, the model's own objective or optimization choices can systematically favor certain outcomes or groups.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="framework">
+  <div class="container">
+    <span class="eyebrow eyebrow-on-dark">A shared vocabulary</span>
+    <h2 class="why-heading">The responsible AI framework</h2>
+    <p class="why-lede">Six principles researchers and regulators commonly return to. Click each one to expand it.</p>
+
+    <div class="framework-grid">
+      <details class="framework-item" open>
+        <summary>Fairness</summary>
+        <p>Outcomes shouldn't systematically disadvantage a group for reasons unrelated to merit or need.</p>
+      </details>
+      <details class="framework-item">
+        <summary>Transparency</summary>
+        <p>People affected by a decision should be able to understand, in plain terms, how it was made.</p>
+      </details>
+      <details class="framework-item">
+        <summary>Accountability</summary>
+        <p>Someone — a person or organization — must be answerable when an AI system causes harm.</p>
+      </details>
+      <details class="framework-item">
+        <summary>Privacy</summary>
+        <p>Systems should collect and use only the data they genuinely need, and protect it appropriately.</p>
+      </details>
+      <details class="framework-item">
+        <summary>Safety</summary>
+        <p>A system should be tested for how it fails, not just how well it performs on average.</p>
+      </details>
+      <details class="framework-item">
+        <summary>Explainability</summary>
+        <p>It should be possible to trace why a specific prediction or decision came out the way it did.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <h2>Put these ideas into practice</h2>
+    <p>See a real disparity measured, in under two minutes, using the demo dataset.</p>
+    <a href="bias-test.html" class="btn btn-on-dark">Open Fairness Lab</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+        <p>AI Ethics &amp; Bias Detection — an educational prototype for exploring fairness in AI systems.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bias-test.html">Fairness Lab</a></li>
+          <li><a href="bias-test.html#simulator">Simulator</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="learn.html">AI Ethics</a></li>
+          <li><a href="learn.html#types-of-bias">Bias Detection</a></li>
+          <li><a href="about.html">Responsible AI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FairLens</span>
+      <span>Educational Prototype — Not a certified fairness audit</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

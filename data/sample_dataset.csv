@@ -1,0 +1,361 @@
+age,age_group,gender,income,education,employment_years,credit_score,loan_amount,approved
+27,18-29,Female,56700,Doctorate,5,586,20200,No
+62,60+,Male,42800,Bachelor's,6,717,12000,Yes
+59,45-59,Female,49400,Master's,6,611,13600,Yes
+26,18-29,Female,57800,Doctorate,5,621,13000,No
+56,45-59,Male,37700,High School,7,632,11700,No
+26,18-29,Female,33900,Bachelor's,5,585,9500,Yes
+53,45-59,Female,30100,Bachelor's,5,576,8800,No
+24,18-29,Female,31900,High School,7,638,10300,Yes
+42,30-44,Male,59400,Master's,9,614,9000,No
+50,45-59,Male,54200,Bachelor's,6,605,22900,Yes
+53,45-59,Male,45200,Bachelor's,3,594,7700,Yes
+39,30-44,Female,25800,High School,9,676,7400,Yes
+62,60+,Female,31800,High School,6,625,6700,Yes
+55,45-59,Female,52300,Master's,5,641,16100,Yes
+30,30-44,Male,32800,High School,4,665,7700,Yes
+51,45-59,Male,38100,High School,7,633,15500,Yes
+53,45-59,Female,27900,High School,7,626,7500,Yes
+36,30-44,Male,47400,Bachelor's,11,687,16200,Yes
+54,45-59,Female,47100,Bachelor's,8,689,10600,No
+61,60+,Female,46400,Bachelor's,4,632,7200,No
+57,45-59,Female,27800,High School,6,642,7500,Yes
+55,45-59,Male,30100,High School,5,592,9400,Yes
+49,45-59,Female,36100,Master's,10,619,10400,No
+33,30-44,Female,41600,Bachelor's,10,700,18200,Yes
+56,45-59,Female,44100,Bachelor's,12,688,16000,No
+37,30-44,Male,35300,Bachelor's,6,671,15800,No
+44,30-44,Male,49000,Master's,2,657,11700,Yes
+35,30-44,Male,33000,High School,6,641,12800,Yes
+35,30-44,Male,26600,Bachelor's,6,684,8400,Yes
+28,18-29,Female,43900,Bachelor's,6,697,14600,Yes
+64,60+,Female,38600,Bachelor's,9,705,17200,Yes
+27,18-29,Female,53900,Master's,5,645,18700,Yes
+24,18-29,Male,37000,Bachelor's,10,734,15500,No
+63,60+,Male,49800,Master's,4,661,18300,Yes
+45,45-59,Male,44900,Master's,1,674,8500,Yes
+40,30-44,Male,43600,Bachelor's,5,659,15700,No
+54,45-59,Male,52300,Master's,6,668,15400,Yes
+38,30-44,Male,41500,Bachelor's,7,609,17700,No
+26,18-29,Male,37900,Master's,3,684,14900,Yes
+53,45-59,Female,31200,Bachelor's,5,799,5700,Yes
+28,18-29,Male,40100,Bachelor's,8,631,7600,Yes
+45,45-59,Female,42300,Bachelor's,6,650,7200,Yes
+63,60+,Female,27300,High School,4,607,8100,No
+63,60+,Male,48600,Bachelor's,8,625,8500,Yes
+37,30-44,Female,44900,Master's,1,724,16500,Yes
+56,45-59,Female,37400,Bachelor's,8,615,11800,Yes
+48,45-59,Male,30600,High School,5,609,12300,Yes
+42,30-44,Male,41300,Bachelor's,3,550,9700,No
+27,18-29,Female,33900,High School,4,590,10400,Yes
+37,30-44,Male,46500,High School,6,544,8600,No
+50,45-59,Male,46700,Master's,6,689,19400,Yes
+65,60+,Male,42800,Bachelor's,7,803,8700,Yes
+21,18-29,Female,47200,Bachelor's,8,632,8500,Yes
+53,45-59,Female,41300,Bachelor's,5,551,8700,No
+59,45-59,Female,32600,High School,9,696,12800,Yes
+63,60+,Female,20800,High School,4,592,3800,No
+40,30-44,Male,38800,Bachelor's,6,717,13000,Yes
+26,18-29,Female,37600,Bachelor's,9,639,14100,No
+33,30-44,Male,45600,Doctorate,3,618,17100,Yes
+59,45-59,Male,35000,Bachelor's,4,630,7200,No
+60,60+,Female,35100,Bachelor's,6,688,5900,Yes
+49,45-59,Male,59100,Master's,10,653,16800,Yes
+26,18-29,Female,57400,Master's,8,633,12100,No
+26,18-29,Female,35200,Bachelor's,5,632,12700,No
+42,30-44,Female,59500,Doctorate,7,595,15300,No
+47,45-59,Female,36600,Master's,4,670,10400,Yes
+22,18-29,Female,47900,Master's,6,556,8800,No
+51,45-59,Male,35300,High School,5,611,11300,Yes
+45,45-59,Male,49100,Bachelor's,7,691,10100,Yes
+21,18-29,Male,36500,Bachelor's,5,660,12900,Yes
+25,18-29,Male,50700,Bachelor's,7,681,8700,Yes
+41,30-44,Male,32700,Bachelor's,7,645,14500,Yes
+53,45-59,Female,56200,Doctorate,11,741,20000,No
+58,45-59,Male,62700,Doctorate,3,704,12800,Yes
+40,30-44,Male,44200,High School,5,660,6800,Yes
+34,30-44,Male,46800,Bachelor's,7,700,11700,Yes
+64,60+,Male,38500,Bachelor's,2,675,7500,Yes
+41,30-44,Female,30600,Bachelor's,10,634,6600,Yes
+35,30-44,Female,20100,High School,7,567,8300,No
+40,30-44,Female,35200,High School,7,664,11600,Yes
+21,18-29,Female,49800,Master's,7,687,10100,Yes
+34,30-44,Male,32900,Bachelor's,4,700,10400,Yes
+44,30-44,Female,60000,Doctorate,5,608,13600,Yes
+62,60+,Male,48600,Bachelor's,12,614,21500,Yes
+54,45-59,Male,67900,Doctorate,7,690,10900,Yes
+56,45-59,Male,43400,Bachelor's,6,642,16000,Yes
+45,45-59,Female,60900,Master's,7,553,23300,No
+25,18-29,Male,31700,High School,4,653,5400,Yes
+38,30-44,Male,43400,Bachelor's,8,550,8700,No
+65,60+,Female,58000,Master's,5,599,15400,No
+22,18-29,Male,43700,Master's,5,725,17900,Yes
+60,60+,Female,77400,Master's,13,775,24100,Yes
+51,45-59,Male,33300,High School,3,562,11500,No
+33,30-44,Male,48700,Bachelor's,10,640,18700,Yes
+56,45-59,Male,38000,High School,7,643,15100,Yes
+58,45-59,Female,45600,High School,5,733,13400,Yes
+22,18-29,Male,47000,Bachelor's,5,616,14200,Yes
+25,18-29,Male,32100,Bachelor's,7,623,11700,No
+50,45-59,Male,61200,Master's,6,739,14000,Yes
+65,60+,Female,47200,Master's,4,627,19200,No
+22,18-29,Female,42300,Bachelor's,5,683,6600,Yes
+50,45-59,Female,44200,Master's,8,579,9200,Yes
+27,18-29,Male,37100,High School,6,629,14500,Yes
+50,45-59,Female,29700,High School,7,550,7500,Yes
+49,45-59,Female,43100,Bachelor's,6,588,8400,No
+25,18-29,Female,47600,Master's,4,694,9800,No
+51,45-59,Male,46900,High School,6,635,14500,Yes
+61,60+,Male,61700,Bachelor's,12,646,24900,No
+59,45-59,Male,41800,Bachelor's,5,602,7200,Yes
+22,18-29,Female,39200,High School,12,644,6200,Yes
+32,30-44,Male,40700,Bachelor's,7,666,11800,No
+31,30-44,Male,61800,Master's,9,717,27000,Yes
+41,30-44,Male,38300,Bachelor's,4,496,9000,Yes
+27,18-29,Female,29600,High School,5,589,13000,No
+59,45-59,Male,60100,Master's,8,669,25000,Yes
+55,45-59,Female,37700,Bachelor's,5,638,8900,Yes
+57,45-59,Female,52900,Master's,8,682,20900,No
+29,18-29,Female,22300,High School,6,653,7900,Yes
+21,18-29,Male,43700,Bachelor's,2,617,13300,Yes
+61,60+,Female,56000,Bachelor's,6,617,15500,Yes
+34,30-44,Female,40200,High School,8,630,15900,No
+50,45-59,Female,60700,Master's,5,714,23500,Yes
+61,60+,Male,26600,High School,5,595,10000,Yes
+22,18-29,Male,36900,High School,8,641,16600,Yes
+21,18-29,Male,35800,Bachelor's,6,656,10500,Yes
+21,18-29,Male,42600,Bachelor's,8,738,16700,Yes
+28,18-29,Male,57700,Master's,7,640,23600,Yes
+23,18-29,Male,62000,Doctorate,7,718,13200,Yes
+57,45-59,Male,19000,High School,1,691,3100,Yes
+48,45-59,Female,32300,Bachelor's,5,639,8800,Yes
+65,60+,Male,24600,High School,7,629,10000,No
+57,45-59,Female,47600,Bachelor's,8,634,11300,Yes
+64,60+,Female,79300,Doctorate,11,663,28500,Yes
+31,30-44,Male,55500,Bachelor's,10,705,8400,Yes
+33,30-44,Female,27300,Bachelor's,4,653,7000,Yes
+59,45-59,Male,51400,Bachelor's,5,656,17200,Yes
+32,30-44,Female,56200,Master's,4,586,10600,Yes
+23,18-29,Male,28000,Bachelor's,2,581,11700,Yes
+51,45-59,Female,30400,High School,5,753,6000,Yes
+57,45-59,Male,47400,Bachelor's,3,627,20000,No
+64,60+,Male,39100,High School,8,601,8400,No
+62,60+,Male,22400,High School,4,711,10000,No
+26,18-29,Female,35000,High School,3,644,11600,No
+55,45-59,Female,29200,Bachelor's,8,684,5100,No
+59,45-59,Male,38100,Bachelor's,3,629,6500,Yes
+52,45-59,Male,49500,Bachelor's,5,625,8500,Yes
+57,45-59,Male,44300,Bachelor's,8,643,14500,Yes
+58,45-59,Female,57800,Doctorate,7,589,22700,No
+41,30-44,Male,59400,Master's,8,655,16100,Yes
+22,18-29,Male,51000,Bachelor's,8,668,14500,Yes
+41,30-44,Female,42600,High School,6,740,13900,No
+30,30-44,Female,56600,Master's,5,656,17500,Yes
+26,18-29,Male,43700,High School,9,519,15600,Yes
+26,18-29,Female,44800,Bachelor's,3,632,13100,No
+52,45-59,Male,52400,Master's,5,802,19100,Yes
+43,30-44,Female,41200,Bachelor's,4,688,18500,No
+45,45-59,Male,37100,Bachelor's,2,589,9500,Yes
+54,45-59,Female,33000,Bachelor's,5,676,5100,No
+45,45-59,Female,35700,Bachelor's,6,605,6700,No
+49,45-59,Female,33200,High School,8,570,10500,Yes
+24,18-29,Male,33300,High School,4,613,8400,Yes
+59,45-59,Female,53400,Bachelor's,7,654,23100,Yes
+41,30-44,Male,33100,High School,6,535,11200,Yes
+27,18-29,Male,60200,Master's,8,597,18400,Yes
+57,45-59,Female,38300,High School,3,630,14900,No
+54,45-59,Male,39900,Bachelor's,5,621,9100,Yes
+23,18-29,Female,56500,Master's,7,679,22400,No
+29,18-29,Female,47900,Master's,4,581,7200,Yes
+21,18-29,Male,54400,Bachelor's,9,694,18300,No
+33,30-44,Female,46000,Bachelor's,5,578,19800,Yes
+25,18-29,Male,49400,Doctorate,3,743,19100,Yes
+52,45-59,Female,39900,Bachelor's,2,540,16200,No
+44,30-44,Male,62000,Master's,5,591,16700,Yes
+65,60+,Female,45600,Master's,1,662,18100,No
+54,45-59,Male,59000,Master's,11,761,18600,Yes
+48,45-59,Male,38100,High School,7,658,12800,Yes
+43,30-44,Male,35100,Bachelor's,6,677,5900,Yes
+23,18-29,Female,34300,High School,3,630,7200,No
+24,18-29,Female,33500,Bachelor's,7,593,10600,Yes
+48,45-59,Female,55100,Doctorate,5,632,9200,Yes
+21,18-29,Female,52600,Bachelor's,9,588,19600,Yes
+22,18-29,Female,44000,Bachelor's,5,573,17700,Yes
+30,30-44,Female,30400,High School,5,657,13000,Yes
+60,60+,Male,63500,Doctorate,6,600,11500,No
+41,30-44,Female,32100,High School,5,653,13900,Yes
+52,45-59,Female,33500,High School,6,566,5700,No
+39,30-44,Male,39800,High School,8,660,11600,Yes
+28,18-29,Male,24700,High School,2,599,9900,Yes
+37,30-44,Female,43600,Bachelor's,7,726,7500,Yes
+25,18-29,Male,38400,Bachelor's,4,658,6000,Yes
+55,45-59,Female,29500,Bachelor's,4,708,4600,Yes
+29,18-29,Male,31500,High School,11,611,9600,Yes
+37,30-44,Male,44400,High School,6,641,17500,Yes
+65,60+,Female,47800,Bachelor's,9,601,9000,No
+47,45-59,Male,24100,High School,6,615,4500,Yes
+41,30-44,Male,30700,Bachelor's,5,629,9800,Yes
+45,45-59,Female,32600,High School,6,598,7200,Yes
+56,45-59,Female,49700,Bachelor's,2,567,18300,Yes
+32,30-44,Male,43800,Bachelor's,9,577,19000,No
+49,45-59,Male,50600,Bachelor's,5,514,19200,Yes
+60,60+,Female,35000,High School,5,577,14500,No
+46,45-59,Female,33100,High School,2,661,10100,Yes
+41,30-44,Female,42000,Master's,6,566,16800,Yes
+27,18-29,Male,40900,High School,7,566,8400,No
+32,30-44,Male,36500,Bachelor's,2,732,6200,Yes
+63,60+,Male,48400,Bachelor's,6,611,16800,No
+45,45-59,Male,32200,Bachelor's,1,649,5300,Yes
+34,30-44,Female,45400,Bachelor's,8,687,19000,No
+39,30-44,Male,53900,Master's,6,690,19300,Yes
+47,45-59,Female,50300,Master's,6,570,21900,No
+45,45-59,Female,36200,High School,6,625,8800,No
+52,45-59,Female,36900,Bachelor's,2,545,10900,No
+32,30-44,Male,26200,High School,3,764,9800,Yes
+50,45-59,Female,52700,Bachelor's,5,555,11700,No
+40,30-44,Female,48800,Bachelor's,5,585,15300,No
+63,60+,Female,31700,High School,10,593,11000,Yes
+28,18-29,Male,46400,Bachelor's,6,564,20600,No
+27,18-29,Male,43500,Master's,3,719,16200,No
+41,30-44,Female,24200,High School,5,768,4500,No
+43,30-44,Male,55900,Bachelor's,13,641,16400,Yes
+52,45-59,Male,28700,Bachelor's,4,567,9400,Yes
+39,30-44,Male,43500,High School,10,527,8400,Yes
+62,60+,Female,31600,High School,6,625,8800,No
+42,30-44,Female,35500,High School,10,633,8300,No
+26,18-29,Male,53400,Master's,5,615,9900,Yes
+26,18-29,Female,37500,High School,6,650,11400,Yes
+64,60+,Male,29400,High School,8,666,5900,Yes
+27,18-29,Female,38400,High School,6,656,12600,No
+63,60+,Female,35100,High School,7,624,7100,No
+33,30-44,Male,31800,Bachelor's,4,579,11700,Yes
+25,18-29,Male,32200,High School,6,675,6700,Yes
+34,30-44,Male,53900,Bachelor's,8,653,22600,Yes
+48,45-59,Female,52300,Bachelor's,4,689,8300,No
+40,30-44,Female,56400,Master's,6,697,17300,Yes
+56,45-59,Female,26900,High School,8,566,6600,No
+48,45-59,Female,52100,Master's,3,566,11300,No
+39,30-44,Male,48400,Bachelor's,6,604,14100,No
+49,45-59,Female,36700,High School,4,574,14800,Yes
+64,60+,Male,59600,Master's,9,705,25300,Yes
+39,30-44,Male,51200,Master's,3,664,12300,Yes
+27,18-29,Female,33800,High School,7,701,6600,Yes
+39,30-44,Female,45300,Master's,4,670,16600,Yes
+58,45-59,Male,30000,Bachelor's,7,660,9700,Yes
+30,30-44,Female,47500,Bachelor's,9,721,10000,Yes
+63,60+,Female,66200,Doctorate,11,703,25000,Yes
+47,45-59,Female,45400,Bachelor's,5,647,13900,Yes
+48,45-59,Female,42900,Master's,7,738,14800,Yes
+35,30-44,Male,54100,Bachelor's,14,676,13900,No
+62,60+,Male,64900,Master's,5,634,18300,No
+22,18-29,Male,42900,Bachelor's,6,600,8800,Yes
+34,30-44,Female,35700,High School,9,686,13500,Yes
+39,30-44,Female,45500,Bachelor's,7,717,9000,Yes
+42,30-44,Male,59300,Bachelor's,9,652,22700,Yes
+42,30-44,Male,29800,High School,10,722,11600,No
+27,18-29,Male,34800,High School,6,530,13000,No
+31,30-44,Female,35000,Bachelor's,4,637,5500,Yes
+25,18-29,Female,29600,High School,6,636,6900,Yes
+46,45-59,Male,29500,High School,2,586,8600,Yes
+36,30-44,Male,50900,Bachelor's,5,774,16700,Yes
+46,45-59,Female,55000,Bachelor's,6,642,23400,No
+47,45-59,Male,44600,Bachelor's,5,621,11700,Yes
+52,45-59,Female,42500,Bachelor's,9,656,17500,Yes
+45,45-59,Male,67000,Master's,4,538,13300,No
+50,45-59,Male,41200,Bachelor's,8,610,10800,Yes
+47,45-59,Female,29400,High School,6,692,4900,No
+50,45-59,Male,20100,High School,5,600,7500,No
+48,45-59,Male,55800,Bachelor's,10,612,10900,Yes
+35,30-44,Male,40200,High School,6,710,9100,No
+32,30-44,Male,57500,Bachelor's,4,714,22000,Yes
+56,45-59,Male,48000,Doctorate,3,681,14900,Yes
+36,30-44,Male,41800,High School,4,607,6400,Yes
+45,45-59,Male,35700,High School,8,631,5400,Yes
+29,18-29,Male,68700,Doctorate,9,627,20800,Yes
+40,30-44,Female,30000,Bachelor's,5,588,7200,Yes
+44,30-44,Female,41000,High School,3,572,8400,Yes
+49,45-59,Male,60500,Master's,10,632,20200,Yes
+44,30-44,Male,50200,Master's,5,594,11000,No
+37,30-44,Female,45100,Bachelor's,4,554,14800,Yes
+64,60+,Female,34300,Bachelor's,3,649,9000,Yes
+44,30-44,Female,27500,High School,4,645,5700,No
+57,45-59,Male,24800,High School,0,714,4700,No
+54,45-59,Male,27600,Bachelor's,4,603,6100,Yes
+46,45-59,Male,36700,High School,3,645,5800,Yes
+60,60+,Male,50700,Bachelor's,6,663,12300,Yes
+26,18-29,Female,48300,Master's,8,646,20300,No
+62,60+,Male,35800,High School,6,679,14300,Yes
+59,45-59,Male,40500,Bachelor's,6,689,10600,Yes
+43,30-44,Male,33000,High School,3,647,10700,Yes
+54,45-59,Female,47000,Master's,6,640,15000,Yes
+44,30-44,Male,28100,High School,7,621,11200,No
+33,30-44,Female,47100,Bachelor's,3,562,10400,No
+56,45-59,Male,43800,Bachelor's,8,608,10500,No
+32,30-44,Female,56600,Bachelor's,6,612,13600,Yes
+35,30-44,Male,43600,Bachelor's,7,587,7100,Yes
+44,30-44,Female,35900,Bachelor's,6,670,8800,Yes
+58,45-59,Female,53700,Bachelor's,9,721,22200,Yes
+38,30-44,Female,53100,Master's,3,595,22500,Yes
+43,30-44,Female,67300,Doctorate,8,684,12300,Yes
+22,18-29,Female,50700,Bachelor's,6,589,14600,No
+26,18-29,Female,36900,Bachelor's,5,626,9800,No
+23,18-29,Female,34300,High School,8,606,10200,Yes
+24,18-29,Male,50200,Master's,6,687,15900,Yes
+60,60+,Female,33400,Bachelor's,6,609,5200,No
+58,45-59,Female,39700,Bachelor's,5,699,16000,Yes
+57,45-59,Female,47300,High School,11,639,20900,No
+23,18-29,Male,54000,Master's,7,621,18700,Yes
+24,18-29,Male,33000,Bachelor's,6,577,11500,Yes
+33,30-44,Female,30600,Bachelor's,5,657,9400,No
+46,45-59,Male,48700,High School,10,699,12200,Yes
+36,30-44,Male,65200,Doctorate,12,695,12700,Yes
+42,30-44,Male,25300,High School,2,749,8200,Yes
+28,18-29,Male,33300,High School,8,723,5400,Yes
+53,45-59,Male,42000,Master's,7,640,16700,Yes
+35,30-44,Male,60500,Master's,5,634,16700,No
+23,18-29,Male,28800,High School,4,658,7900,No
+54,45-59,Male,52000,Bachelor's,6,600,12900,Yes
+61,60+,Male,41000,Bachelor's,4,704,18100,Yes
+21,18-29,Female,60500,Master's,5,671,12200,No
+40,30-44,Male,44200,Bachelor's,6,660,8600,Yes
+58,45-59,Female,46600,Bachelor's,4,678,9300,Yes
+52,45-59,Female,44700,Bachelor's,3,732,15500,Yes
+59,45-59,Male,47700,Bachelor's,7,658,21300,Yes
+39,30-44,Male,54700,Master's,7,651,12100,Yes
+37,30-44,Female,37200,Bachelor's,2,717,15700,Yes
+52,45-59,Female,45900,High School,5,688,10700,Yes
+27,18-29,Female,43300,Master's,4,630,14900,Yes
+31,30-44,Female,48700,Master's,3,645,7900,No
+48,45-59,Female,49700,Master's,4,659,14800,Yes
+51,45-59,Female,37100,High School,7,661,12900,Yes
+26,18-29,Male,26800,High School,2,551,8300,Yes
+43,30-44,Female,45500,Bachelor's,7,564,10100,No
+37,30-44,Male,32200,High School,6,589,12800,No
+43,30-44,Female,49300,Doctorate,6,609,21700,No
+64,60+,Female,39800,Bachelor's,3,602,11500,No
+24,18-29,Male,36500,Bachelor's,8,687,12400,Yes
+65,60+,Female,42000,Master's,9,654,16300,Yes
+41,30-44,Male,41600,Bachelor's,4,651,9300,Yes
+55,45-59,Female,43100,Bachelor's,3,570,17600,No
+40,30-44,Male,45200,Bachelor's,5,618,10600,Yes
+34,30-44,Female,49100,Bachelor's,9,687,18800,Yes
+55,45-59,Male,26200,Bachelor's,3,670,4800,Yes
+51,45-59,Female,32000,Bachelor's,5,603,7600,Yes
+27,18-29,Female,67900,Master's,9,672,21100,Yes
+52,45-59,Female,35100,Bachelor's,6,767,10800,Yes
+54,45-59,Female,34100,High School,2,625,13800,No
+38,30-44,Female,38500,Bachelor's,7,611,17300,Yes
+62,60+,Female,39400,Bachelor's,2,624,7200,Yes
+49,45-59,Male,32600,High School,10,655,7500,Yes
+36,30-44,Female,33700,High School,2,618,8700,Yes
+21,18-29,Male,44300,Bachelor's,7,647,13000,Yes
+51,45-59,Female,40200,Bachelor's,7,570,12000,No
+30,30-44,Male,49400,Doctorate,2,597,20100,Yes
+55,45-59,Female,36200,High School,7,633,13800,Yes
+44,30-44,Female,24900,High School,6,629,3900,No
+42,30-44,Male,52600,Master's,4,617,15100,Yes
+28,18-29,Female,66200,Master's,2,632,22200,Yes
+53,45-59,Female,47400,High School,11,656,13700,Yes
+28,18-29,Female,36600,High School,4,681,6900,Yes
+39,30-44,Male,32800,High School,6,633,8800,Yes
+58,45-59,Female,30600,Bachelor's,8,674,8400,Yes

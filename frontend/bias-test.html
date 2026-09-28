@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fairness Testing Lab — FairLens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/testing.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bias-test.html" class="active">Fairness Lab</a></li>
+      <li><a href="bias-test.html#simulator">Simulator</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="mobile-cta"><a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="lab-header">
+  <div class="container">
+    <span class="eyebrow">Fairness Testing Lab</span>
+    <h1>Test a dataset for bias, step by step</h1>
+    <p>Use the built-in demo dataset to see the whole flow in under a minute, or upload your own CSV.</p>
+  </div>
+</header>
+
+<main class="container lab-layout">
+
+  <div id="error-banner" class="error-banner hidden" role="alert">
+    <strong>We couldn't analyze this dataset.</strong>
+    <p id="error-message"></p>
+  </div>
+
+  <!-- STEP 1: Dataset selection -->
+  <section class="lab-card" id="step-dataset">
+    <div class="lab-card-head">
+      <span class="step-number">1</span>
+      <h2>Select a dataset</h2>
+    </div>
+
+    <div class="dataset-options">
+      <button class="dataset-option" id="btn-use-demo">
+        <span class="dataset-option-title">Use Demo Dataset</span>
+        <span class="dataset-option-desc">Loan Approval Dataset — 360 synthetic applicants, ready instantly.</span>
+      </button>
+
+      <label class="dataset-option dataset-option-upload" for="csv-upload">
+        <span class="dataset-option-title">Upload Your CSV</span>
+        <span class="dataset-option-desc">Bring your own dataset. We'll auto-detect its columns.</span>
+        <input type="file" id="csv-upload" accept=".csv" class="visually-hidden">
+      </label>
+    </div>
+
+    <p class="lab-note" id="loading-note" style="display:none;">Loading dataset…</p>
+  </section>
+
+  <!-- Dataset overview + preview (hidden until a dataset is loaded) -->
+  <section class="lab-card hidden" id="dataset-overview-card">
+    <div class="lab-card-head">
+      <h2>Dataset overview</h2>
+      <span class="dataset-badge" id="dataset-name-badge"></span>
+    </div>
+
+    <dl class="overview-stats">
+      <div><dt>Rows</dt><dd id="stat-rows">—</dd></div>
+      <div><dt>Columns</dt><dd id="stat-columns">—</dd></div>
+      <div><dt>Missing values</dt><dd id="stat-missing">—</dd></div>
+      <div><dt>Suggested attribute</dt><dd id="stat-protected">—</dd></div>
+    </dl>
+
+    <div class="table-scroll">
+      <table class="preview-table" id="preview-table">
+        <thead><tr id="preview-head"></tr></thead>
+        <tbody id="preview-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- STEP 2-4: Column selection -->
+  <section class="lab-card hidden" id="step-config">
+    <div class="lab-card-head">
+      <span class="step-number">2</span>
+      <h2>Configure the test</h2>
+    </div>
+
+    <div class="config-grid">
+      <div class="field">
+        <label for="select-protected">Protected attribute</label>
+        <select id="select-protected"></select>
+        <span class="field-hint">The demographic column to compare groups across, e.g. Gender.</span>
+      </div>
+      <div class="field">
+        <label for="select-outcome">Outcome / target column</label>
+        <select id="select-outcome"></select>
+        <span class="field-hint">The decision being made, e.g. Approved.</span>
+      </div>
+      <div class="field">
+        <label for="select-positive">Positive outcome value</label>
+        <select id="select-positive"></select>
+        <span class="field-hint">Which value of the outcome column counts as the "good" result.</span>
+      </div>
+    </div>
+
+    <button class="btn btn-primary btn-run" id="btn-run-test">Run Fairness Test</button>
+  </section>
+
+  <!-- Analysis animation -->
+  <section class="lab-card hidden" id="analysis-card">
+    <h2>Analyzing dataset…</h2>
+    <ul class="analysis-steps" id="analysis-steps">
+      <li data-step="0">Checking demographic distribution</li>
+      <li data-step="1">Calculating group selection rates</li>
+      <li data-step="2">Measuring outcome disparity</li>
+      <li data-step="3">Calculating fairness metrics</li>
+      <li data-step="4">Generating fairness assessment</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- BIAS SIMULATOR -->
+<section class="section simulator-section" id="simulator">
+  <div class="container">
+    <span class="eyebrow">Interactive</span>
+    <h2>Bias Simulator</h2>
+    <p class="simulator-lede">Drag the sliders to set a selection rate for two hypothetical groups and watch the fairness metrics update in real time.</p>
+
+    <div class="simulator-grid">
+      <div class="simulator-controls">
+        <div class="slider-field">
+          <div class="slider-label-row">
+            <label for="slider-a">Group A selection rate</label>
+            <span class="slider-value" id="value-a">80%</span>
+          </div>
+          <input type="range" id="slider-a" min="0" max="100" value="80">
+        </div>
+        <div class="slider-field">
+          <div class="slider-label-row">
+            <label for="slider-b">Group B selection rate</label>
+            <span class="slider-value" id="value-b">60%</span>
+          </div>
+          <input type="range" id="slider-b" min="0" max="100" value="60">
+        </div>
+
+        <div class="simulator-readout">
+          <div class="readout-item">
+            <span class="readout-label">Selection rate difference</span>
+            <span class="readout-value" id="sim-difference">20 pts</span>
+          </div>
+          <div class="readout-item">
+            <span class="readout-label">Disparate impact</span>
+            <span class="readout-value" id="sim-impact">0.75</span>
+          </div>
+          <div class="readout-item">
+            <span class="readout-label">Status</span>
+            <span class="readout-value" id="sim-status">Moderate Disparity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="simulator-chart-wrap">
+        <canvas id="simulator-chart" height="260"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+        <p>AI Ethics &amp; Bias Detection — an educational prototype for exploring fairness in AI systems.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bias-test.html">Fairness Lab</a></li>
+          <li><a href="bias-test.html#simulator">Simulator</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="learn.html">AI Ethics</a></li>
+          <li><a href="learn.html#types-of-bias">Bias Detection</a></li>
+          <li><a href="about.html">Responsible AI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FairLens</span>
+      <span>Educational Prototype — Not a certified fairness audit</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/chart.umd.js"></script>
+<script src="js/main.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/testing.js"></script>
+</body>
+</html>

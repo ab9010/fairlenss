@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fairness Analysis Report — FairLens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bias-test.html">Fairness Lab</a></li>
+      <li><a href="bias-test.html#simulator">Simulator</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="mobile-cta"><a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="bias-test.html" class="btn btn-primary">Test Your Dataset</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Shown only if the user lands here with no analysis in session storage -->
+<div class="container empty-state hidden" id="empty-state">
+  <h1>No analysis to show yet</h1>
+  <p>Run a fairness test from the Fairness Lab first, and your results will appear here.</p>
+  <a href="bias-test.html" class="btn btn-primary">Open Fairness Lab</a>
+</div>
+
+<div id="results-content" class="hidden">
+
+  <header class="results-header">
+    <div class="container results-header-inner">
+      <div>
+        <span class="eyebrow eyebrow-on-dark">Fairness Analysis Report</span>
+        <h1 id="report-dataset-name">Dataset</h1>
+        <p id="report-meta-line" class="results-meta-line"></p>
+      </div>
+      <button class="btn btn-on-dark" id="btn-download-report">Download Fairness Report</button>
+    </div>
+  </header>
+
+  <section class="score-section">
+    <div class="container score-layout">
+      <div class="score-panel">
+        <div class="score-number"><span id="score-value">0</span><span class="score-max">/100</span></div>
+        <div class="score-level" id="score-level">—</div>
+        <p class="score-caveat">
+          Fairness Score is an educational composite indicator used by this
+          prototype. It is not a universal regulatory or scientific threshold.
+        </p>
+      </div>
+
+      <div class="severity-panel">
+        <h3>Fairness level</h3>
+        <div class="severity-track">
+          <div class="severity-fill" id="severity-fill"></div>
+          <div class="severity-marker" id="severity-marker"></div>
+        </div>
+        <div class="severity-scale-labels">
+          <span>0</span><span>40</span><span>60</span><span>80</span><span>100</span>
+        </div>
+        <div class="severity-legend">
+          <span><i class="dot bg-severe"></i>Severe (0–39)</span>
+          <span><i class="dot bg-high"></i>High (40–59)</span>
+          <span><i class="dot bg-moderate"></i>Moderate (60–79)</span>
+          <span><i class="dot bg-good"></i>Fair (80–100)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Fairness metrics</h2>
+      <div class="metric-cards" id="metric-cards"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <section class="section section-tinted">
+    <div class="container charts-grid">
+      <div class="chart-card">
+        <h3>Approval rate by group</h3>
+        <div class="chart-box"><canvas id="chart-approval"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Group distribution</h3>
+        <div class="chart-box"><canvas id="chart-distribution"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Outcome distribution by group</h3>
+        <div class="chart-box"><canvas id="chart-outcome"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Fairness metric comparison</h3>
+        <div class="chart-box"><canvas id="chart-metrics"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Why was a disparity detected?</h2>
+      <div class="explanation-card" id="explanation-card"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <section class="section section-tinted">
+    <div class="container">
+      <h2>Recommendations</h2>
+      <div class="recommendation-grid" id="recommendation-grid"><!-- injected by JS --></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Before vs. after: an educational mitigation simulation</h2>
+      <p class="mitigation-note">This is a simplified simulation of a fairness-aware threshold adjustment — it does not represent a scientifically retrained model.</p>
+      <div class="mitigation-layout">
+        <div class="chart-card">
+          <div class="chart-box"><canvas id="chart-mitigation"></canvas></div>
+        </div>
+        <table class="mitigation-table" id="mitigation-table">
+          <thead><tr><th>Group</th><th>Before</th><th>After</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <h2>Want to test another dataset?</h2>
+      <p>Run the analysis again with a different protected attribute, outcome, or your own CSV.</p>
+      <a href="bias-test.html" class="btn btn-on-dark">Back to Fairness Lab</a>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand"><span class="mark"></span>FairLens</a>
+        <p>AI Ethics &amp; Bias Detection — an educational prototype for exploring fairness in AI systems.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bias-test.html">Fairness Lab</a></li>
+          <li><a href="bias-test.html#simulator">Simulator</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="learn.html">AI Ethics</a></li>
+          <li><a href="learn.html#types-of-bias">Bias Detection</a></li>
+          <li><a href="about.html">Responsible AI</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FairLens</span>
+      <span>Educational Prototype — Not a certified fairness audit</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/chart.umd.js"></script>
+<script src="js/main.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/results.js"></script>
+</body>
+</html>
